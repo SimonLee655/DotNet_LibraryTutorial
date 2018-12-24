@@ -16,8 +16,7 @@ namespace ConsoleApp
             //Library Code
             MyClass myClass = new MyClass();
 
-
-
+            myClass.SayHello();
 
             Console.ReadKey();
         }
