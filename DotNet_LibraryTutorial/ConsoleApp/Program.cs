@@ -12,6 +12,8 @@ namespace ConsoleApp
         {
             Console.WriteLine("\"Hello Word\" from ConsoleApp.");
 
+            //Library Code
+            MyClass myClass = new MyClass();
 
 
 
