@@ -8,5 +8,9 @@ namespace ClassLibrary
 {
     public class MyClass
     {
+        public void SayHello()
+        {
+            Console.WriteLine("\"SayHello\" from MyClass");
+        }
     }
 }
