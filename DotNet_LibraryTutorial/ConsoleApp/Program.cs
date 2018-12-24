@@ -11,6 +11,11 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             Console.WriteLine("\"Hello Word\" from ConsoleApp.");
+
+
+
+
+
             Console.ReadKey();
         }
     }
