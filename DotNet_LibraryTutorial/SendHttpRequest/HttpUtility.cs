@@ -9,19 +9,30 @@ namespace SendHttpRequest
     public class HttpUtility
     {
         public static string ProxyString = string.Empty;
+        /// <summary>
+        /// Get Request
+        /// </summary>
+        /// <param name="URI"></param>
+        /// <returns></returns>
         public static string HttpGet(string URI)
         {
             System.Net.WebRequest req = System.Net.WebRequest.Create(URI);
-            req.Proxy = new System.Net.WebProxy(ProxyString, true); //true means no proxy
+            //req.Proxy = new System.Net.WebProxy(ProxyString, true); //true means no proxy
             System.Net.WebResponse resp = req.GetResponse();
             System.IO.StreamReader sr = new System.IO.StreamReader(resp.GetResponseStream());
             return sr.ReadToEnd().Trim();
         }
 
+        /// <summary>
+        /// Post Request
+        /// </summary>
+        /// <param name="URI"></param>
+        /// <param name="Parameters"></param>
+        /// <returns></returns>
         public static string HttpPost(string URI, string Parameters)
         {
             System.Net.WebRequest req = System.Net.WebRequest.Create(URI);
-            req.Proxy = new System.Net.WebProxy(ProxyString, true);
+            //req.Proxy = new System.Net.WebProxy(ProxyString, true);
             //Add these, as we're doing a POST
             req.ContentType = "application/x-www-form-urlencoded";
             req.Method = "POST";

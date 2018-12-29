@@ -10,7 +10,7 @@ namespace SendHttpRequest
     {
         static void Main(string[] args)
         {
-            string uri = "192.168.1.1";
+            string uri = "https://stackoverflow.com/questions/7688350/c-sharp-how-to-make-a-http-call";
             //test get method
             var response = HttpUtility.HttpGet(uri);
             Console.WriteLine($"Get Response: {response}");
